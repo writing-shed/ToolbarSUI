@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "ToolbarView",
+    name: "ToolbarSUI",
     platforms: [
         .iOS(.v13)
     ],
