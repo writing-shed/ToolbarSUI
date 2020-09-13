@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "ToolbarView",
+    platforms: [
+        .iOS(.v13)
+    ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
@@ -21,8 +24,8 @@ let package = Package(
         .target(
             name: "ToolbarView",
             dependencies: []),
-        .testTarget(
-            name: "ToolbarViewTests",
-            dependencies: ["ToolbarView"]),
+    ],
+    swiftLanguageVersions: [
+        .version("5.1")
     ]
 )
