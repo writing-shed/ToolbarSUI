@@ -9,7 +9,6 @@ import SwiftUI
 
 #if os(iOS) || targetEnvironment(macCatalyst)
 public struct ToolbarItemView: View {
-    @inlinable
     @Binding var selected : Int
     public let index: Int
     public let item: ToolbarItem
