@@ -14,14 +14,12 @@ public struct ToolbarView : View {
     public let action: (Int)->Void
     public var label: String
     
-    @inlinable
     init(label: String, items: [ToolbarItem], action:@escaping (Int)->Void) {
         self.items = items
         self.action = action
         self.label = label
     }
     
-    @inlinable
     func itemView(at index: Int) -> some View {
         Button(action: {
             withAnimation { self.action(index) }
@@ -32,7 +30,6 @@ public struct ToolbarView : View {
         }.disabled(items[index].disabled)
     }
     
-    @inlinable
     public var body: some View {
         HStack(alignment: .bottom) {
             HStack(alignment: .center) {

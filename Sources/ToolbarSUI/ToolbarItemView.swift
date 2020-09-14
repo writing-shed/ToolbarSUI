@@ -16,7 +16,6 @@ public struct ToolbarItemView: View {
         selected == index
     }
 
-    @inlinable
     public var body: some View {
         HStack {
             item.icon

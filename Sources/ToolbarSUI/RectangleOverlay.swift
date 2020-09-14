@@ -9,7 +9,6 @@ import SwiftUI
 
 #if os(iOS) || targetEnvironment(macCatalyst)
 struct RectangleOverlay: ViewModifier {
-    @inlinable
     func body(content: Content) -> some View {
         content
             .overlay(

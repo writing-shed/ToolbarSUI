@@ -13,7 +13,6 @@ public struct ToolbarItem {
     public let title: String
     public let disabled:Bool
     
-    @inlinable
     public init(icon: Image,
                 title: String,
                 disabled: Bool){
@@ -22,7 +21,6 @@ public struct ToolbarItem {
         self.disabled = disabled
     }
     
-    @inlinable
     public init(icon: String,
                 title: String,
                 disabled: Bool) {
