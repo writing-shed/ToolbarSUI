@@ -12,9 +12,15 @@ public struct ToolbarView : View {
     @State private var selectedIndex = -1
     public let items: [ToolbarItem]
     public let action: (Int)->Void
-    public var label: String
+    public var label: String?
     
-    public init(label: String, items: [ToolbarItem], action:@escaping (Int)->Void) {
+    /// View Initialiser
+    /// - Parameters:
+    ///   - label: Test to appear on the left of the toolbar. Omit if not needed.
+    ///   - items: An array of ToolbarItems. Each entry specifies a button.
+    ///   - action: This is a closure that manages button presses. It has a single Int argument
+    ///     with values in the range 0 to the number of buttons.
+    public init(label: String? = nil, items: [ToolbarItem], action:@escaping (Int)->Void) {
         self.items = items
         self.action = action
         self.label = label
@@ -33,8 +39,8 @@ public struct ToolbarView : View {
     public var body: some View {
         HStack(alignment: .bottom) {
             HStack(alignment: .center) {
-                if !label.isEmpty {
-                    Text(label)
+                if label != nil {
+                    Text(label!)
                         .foregroundColor(Color.gray)
                         .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
                 }
