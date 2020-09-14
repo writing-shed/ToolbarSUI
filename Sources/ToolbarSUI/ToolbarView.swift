@@ -7,19 +7,25 @@
 
 import SwiftUI
 
-#if os(iOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
 struct ToolbarView : View {
+    @inlinable
     @State private var selectedIndex = -1
+    @usableFromInline
     public let items: [ToolbarItem]
+    @usableFromInline
     public let action: (Int)->Void
+    @usableFromInline
     public var label: String
     
+    @inlinable
     init(label: String, items: [ToolbarItem], action:@escaping (Int)->Void) {
         self.items = items
         self.action = action
         self.label = label
     }
     
+    @inlinable
     func itemView(at index: Int) -> some View {
         Button(action: {
             withAnimation { self.action(index) }
@@ -30,6 +36,7 @@ struct ToolbarView : View {
         }.disabled(items[index].disabled)
     }
     
+    @inlinable
     public var body: some View {
         HStack(alignment: .bottom) {
             HStack(alignment: .center) {

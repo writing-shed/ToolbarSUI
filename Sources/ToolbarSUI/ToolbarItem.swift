@@ -7,12 +7,16 @@
 
 import SwiftUI
 
-#if os(iOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
 public struct ToolbarItem {
+    @usableFromInline
     public let icon: Image
+    @usableFromInline
     public let title: String
+    @usableFromInline
     public let disabled:Bool
     
+    @inlinable
     public init(icon: Image,
                 title: String,
                 disabled: Bool){
@@ -21,6 +25,7 @@ public struct ToolbarItem {
         self.disabled = disabled
     }
     
+    @inlinable
     public init(icon: String,
                 title: String,
                 disabled: Bool) {
