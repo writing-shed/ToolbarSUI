@@ -14,7 +14,7 @@ public struct ToolbarView : View {
     public let action: (Int)->Void
     public var label: String
     
-    init(label: String, items: [ToolbarItem], action:@escaping (Int)->Void) {
+    public init(label: String, items: [ToolbarItem], action:@escaping (Int)->Void) {
         self.items = items
         self.action = action
         self.label = label
