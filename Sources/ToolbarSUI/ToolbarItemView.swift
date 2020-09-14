@@ -11,9 +11,7 @@ import SwiftUI
 public struct ToolbarItemView: View {
     @inlinable
     @Binding var selected : Int
-    @usableFromInline
     public let index: Int
-    @usableFromInline
     public let item: ToolbarItem
     var isSelected : Bool{
         selected == index

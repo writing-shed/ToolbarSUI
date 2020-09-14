@@ -11,11 +11,8 @@ import SwiftUI
 struct ToolbarView : View {
     @inlinable
     @State private var selectedIndex = -1
-    @usableFromInline
     public let items: [ToolbarItem]
-    @usableFromInline
     public let action: (Int)->Void
-    @usableFromInline
     public var label: String
     
     @inlinable
