@@ -22,7 +22,7 @@ Install the package using the Swift Package Manager .
 
 # Use
 
-For full details on how to use  this package see 
+For full details on how to use  this package see this [Medium Article](https://medium.com/@keithlander/a-swiftui-toolbar-777523c03b7d)https://medium.com/@keithlander/a-swiftui-toolbar-777523c03b7d
 
 
 
