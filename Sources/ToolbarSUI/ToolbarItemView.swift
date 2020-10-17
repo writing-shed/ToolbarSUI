@@ -21,7 +21,6 @@ public struct ToolbarItemView: View {
             item.icon
                 .imageScale(.large)
         }
-        .padding()
     }
 }
 #endif
