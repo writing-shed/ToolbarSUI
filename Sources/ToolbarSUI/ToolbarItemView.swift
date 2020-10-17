@@ -20,7 +20,6 @@ public struct ToolbarItemView: View {
         HStack {
             item.icon
                 .imageScale(.large)
-                .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
         }
     }
 }
