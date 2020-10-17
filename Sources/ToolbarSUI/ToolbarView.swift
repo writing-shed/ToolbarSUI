@@ -49,9 +49,9 @@ public struct ToolbarView : View {
                     self.itemView(at: index)
                     Spacer()
                 }
-                .padding(EdgeInsets(top: 3, leading: 0, bottom: 3, trailing: 0))
             }
         }
+        .padding(EdgeInsets(top: 3, leading: 0, bottom: 3, trailing: 0))
         .modifier(RectangleOverlay())
     }
 }
