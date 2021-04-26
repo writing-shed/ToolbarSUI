@@ -19,6 +19,7 @@ public struct ToolbarItemView: View {
     public var body: some View {
         HStack {
             item.icon
+                .disabled(item.disabled)
                 .imageScale(.large)
         }
     }
